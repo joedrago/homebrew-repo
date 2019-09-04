@@ -1,8 +1,8 @@
 class Colorist < Formula
   desc "Image Converter with heavy ICC lumi tag abuse"
   homepage "https://github.com/joedrago/colorist"
-  url "https://github.com/joedrago/colorist/archive/v0.0.50.tar.gz"
-  sha256 "9263913cb90a110c34f67bd6d5bc5901425ebf08e277fdc8c681bb4e77c69845"
+  url "https://github.com/joedrago/colorist/archive/v0.0.51.tar.gz"
+  sha256 "bcfa44f0a93734b536c3f49e11f40eac09be1e70ef15d870e2ada1d1418e2f04"
   depends_on "cmake" => :build
   depends_on "nasm" => :build
 
