@@ -20,7 +20,7 @@ class Colorist < Formula
   end
 
   bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/raw/master/Releases"
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.3/"
     cellar :any_skip_relocation
     sha256 "501ad9bcbc89c1725706d7ea29b1b36fc6277d82e2ed21e3048a114a42848178" => :catalina
   end
