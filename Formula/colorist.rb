@@ -1,17 +1,22 @@
 class Colorist < Formula
   desc "Image Converter with heavy ICC lumi tag abuse"
   homepage "https://github.com/joedrago/colorist"
-  url "https://github.com/joedrago/colorist/archive/v0.0.56.tar.gz"
-  sha256 "a4192ef3e5acf1e0b77ed47d3057382fd4e14f4ed62ae7e136260a35b92353a8"
+  url "https://github.com/joedrago/colorist/archive/v0.1.3.tar.gz"
+  sha256 "0dd3ab07889a5050e289e566da189d99dc5d99db71b7044ee8eccd777bac1d47"
   depends_on "cmake" => :build
   depends_on "nasm" => :build
+  depends_on "rust" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
 
   def install
-    mkdir_p "build"
-	cd "build"
-    system "cmake", "-DHOMEBREW_BUILD=1", "-DCMAKE_BUILD_TYPE=Release", "..", *std_cmake_args
-    system "make", "colorist-bin"
-    bin.install "bin/colorist/colorist"
+    # Pre-install a local copy of cbindgen as rav1e.cmd won't find it in the PATH
+    mkdir_p "#{buildpath}/cargoroot"
+    system "cargo", "install", "cbindgen", "--root", "#{buildpath}/cargoroot"
+    ENV.append_path "PATH", "#{buildpath}/cargoroot/bin"
+
+    system "zsh", "./scripts/build.sh", "-DHOMEBREW_BUILD=1"
+    bin.install "#{buildpath}/build/bin/colorist/colorist"
   end
 
   test do
