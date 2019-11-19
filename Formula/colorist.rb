@@ -19,11 +19,11 @@ class Colorist < Formula
     bin.install "#{buildpath}/build/bin/colorist/colorist"
   end
 
-  # bottle do
-  #   root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.3/"
-  #   cellar :any_skip_relocation
-  #   sha256 "501ad9bcbc89c1725706d7ea29b1b36fc6277d82e2ed21e3048a114a42848178" => :catalina
-  # end
+  bottle do
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.4/"
+    cellar :any_skip_relocation
+    sha256 "e893ef16eb6fff9bcba008caf8f05f8ca00993f393e26b078d030a027a255f43" => :catalina
+  end
 
   test do
     system "false"
