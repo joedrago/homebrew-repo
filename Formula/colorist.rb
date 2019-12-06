@@ -1,8 +1,8 @@
 class Colorist < Formula
   desc "Image Converter with heavy ICC lumi tag abuse"
   homepage "https://github.com/joedrago/colorist"
-  url "https://github.com/joedrago/colorist/archive/v0.1.4.tar.gz"
-  sha256 "1d07001d1c5dfc2dad235ddc9cca1db3667202e8e792d3f8bdf696f1b70f9870"
+  url "https://github.com/joedrago/colorist/archive/v0.1.6.tar.gz"
+  sha256 "1299fc47961253d1e32f80b57e212a1650ff2c9f6580e8ad5f314b88ea88cf22"
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "rust" => :build
@@ -19,11 +19,11 @@ class Colorist < Formula
     bin.install "#{buildpath}/build/bin/colorist/colorist"
   end
 
-  bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.4/"
-    cellar :any_skip_relocation
-    sha256 "e893ef16eb6fff9bcba008caf8f05f8ca00993f393e26b078d030a027a255f43" => :catalina
-  end
+#  bottle do
+#    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.6/"
+#    cellar :any_skip_relocation
+#    sha256 "e893ef16eb6fff9bcba008caf8f05f8ca00993f393e26b078d030a027a255f43" => :catalina
+#  end
 
   test do
     system "false"
