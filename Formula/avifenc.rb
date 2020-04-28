@@ -22,11 +22,11 @@ class Avifenc < Formula
     bin.install "#{buildpath}/build/avifdump"
   end
 
-  #bottle do
-  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.15/"
-  #  cellar :any_skip_relocation
-  #  sha256 "20be884514b63fbf0dfd222081a1d874eec7213a1387a64e1a14eee59b52381b" => :catalina
-  #end
+  bottle do
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenv-v0.7.2/"
+    cellar :any_skip_relocation
+    sha256 "98f4f4dc125ee3c26713824c33162781d383a27225fb113280ba5554708e1e7b" => :catalina
+  end
 
   test do
     system "false"
