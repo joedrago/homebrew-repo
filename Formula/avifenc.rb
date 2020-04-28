@@ -23,7 +23,7 @@ class Avifenc < Formula
   end
 
   bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenv-v0.7.2/"
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.7.2/"
     cellar :any_skip_relocation
     sha256 "98f4f4dc125ee3c26713824c33162781d383a27225fb113280ba5554708e1e7b" => :catalina
   end
