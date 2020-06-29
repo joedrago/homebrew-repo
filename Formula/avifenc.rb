@@ -22,11 +22,11 @@ class Avifenc < Formula
     bin.install "#{buildpath}/build/avifdump"
   end
 
-  #bottle do
-  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.7.2/"
-  #  cellar :any_skip_relocation
-  #  sha256 "98f4f4dc125ee3c26713824c33162781d383a27225fb113280ba5554708e1e7b" => :catalina
-  #end
+  bottle do
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.7.3/"
+    cellar :any_skip_relocation
+    sha256 "f0000d9ebc6a9408c1aec6d30e8bf68dd28942e9929be3e6370c251041b3ac91" => :catalina
+  end
 
   test do
     system "false"
