@@ -19,7 +19,6 @@ class Avifenc < Formula
     system "ninja"
     bin.install "#{buildpath}/build/avifenc"
     bin.install "#{buildpath}/build/avifdec"
-    bin.install "#{buildpath}/build/avifdump"
   end
 
   #bottle do
