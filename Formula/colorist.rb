@@ -20,10 +20,10 @@ class Colorist < Formula
   end
 
   #bottle do
-  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.15/"
-  #  cellar :any_skip_relocation
-  #  sha256 "20be884514b63fbf0dfd222081a1d874eec7213a1387a64e1a14eee59b52381b" => :catalina
-  #end
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.17/"
+    cellar :any_skip_relocation
+    sha256 "cd417b55a5242043d752519710e58014bfd7fbb9ffb39bf58df7c1f1b1e40a6e" => :catalina
+  end
 
   test do
     system "false"
