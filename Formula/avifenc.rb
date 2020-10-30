@@ -1,8 +1,8 @@
 class Avifenc < Formula
   desc "avifenc / avifdec"
   homepage "https://github.com/AOMediaCodec/libavif"
-  url "https://github.com/AOMediaCodec/libavif/archive/v0.8.0.tar.gz"
-  sha256 "c917f4a27add61b8ad15f328090942d519460b71219f31e60e5fe6aa8cf3dc4e"
+  url "https://github.com/AOMediaCodec/libavif/archive/v0.8.2.tar.gz"
+  sha256 "1b79ec439d446dfd659098d36401b4d2df77dd19d53d7d944ade7164b3ef28a2"
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "ninja" => :build
@@ -21,11 +21,11 @@ class Avifenc < Formula
     bin.install "#{buildpath}/build/avifdec"
   end
 
-  bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.8.0/"
-    cellar :any_skip_relocation
-    sha256 "e941deaca08d19c71fa1b5baf14a455035d488cca04b157da2e0c17149bacf03" => :catalina
-  end
+  #bottle do
+  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.8.0/"
+  #  cellar :any_skip_relocation
+  #  sha256 "e941deaca08d19c71fa1b5baf14a455035d488cca04b157da2e0c17149bacf03" => :catalina
+  #end
 
   test do
     system "false"
