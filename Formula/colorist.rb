@@ -1,8 +1,8 @@
 class Colorist < Formula
   desc "Image Converter with heavy ICC lumi tag abuse"
   homepage "https://github.com/joedrago/colorist"
-  url "https://github.com/joedrago/colorist/archive/v0.1.20.tar.gz"
-  sha256 "4d04cb4bbe0b391192239485c0aeab9ea4641f615ea80ddf1769bfb2f650d8fc"
+  url "https://github.com/joedrago/colorist/archive/v0.1.21.tar.gz"
+  sha256 "3b04e4ddb44d97e64879672733f7285f1e603e7da10ce2a85142fc1dbad61c7d"
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "rust" => :build
@@ -15,15 +15,18 @@ class Colorist < Formula
     system "cargo", "install", "cbindgen", "--root", "#{buildpath}/cargoroot"
     ENV.append_path "PATH", "#{buildpath}/cargoroot/bin"
 
+    # Note: The branch here must match the branch used by the version of colorist above!
+    system "git", "clone", "-b", "v0.8.3", "https://github.com/AOMediaCodec/libavif.git", "ext/libavif"
+
     system "zsh", "./scripts/build.sh", "-DHOMEBREW_BUILD=1"
     bin.install "#{buildpath}/build/bin/colorist/colorist"
   end
 
-  bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.20/"
-    cellar :any_skip_relocation
-    sha256 "b8484c737b4304ff97eb9695bbbc997c3b09bfc1e7ae912d0091567b52eac5f6" => :catalina
-  end
+  #bottle do
+  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/colorist-v0.1.20/"
+  #  cellar :any_skip_relocation
+  #  sha256 "b8484c737b4304ff97eb9695bbbc997c3b09bfc1e7ae912d0091567b52eac5f6" => :catalina
+  #end
 
   test do
     system "false"
