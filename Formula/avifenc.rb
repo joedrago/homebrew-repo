@@ -1,5 +1,5 @@
 class Avifenc < Formula
-  desc "/ avifdec"
+  desc "avifenc / avifdec"
   homepage "https://github.com/AOMediaCodec/libavif"
   url "https://github.com/AOMediaCodec/libavif/archive/v0.8.4.tar.gz"
   sha256 "116b46a9a497c6ef178c5a20b912d8ac02f888dc8c537e40b5d16700823a9b16"
