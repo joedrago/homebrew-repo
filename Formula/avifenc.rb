@@ -2,11 +2,11 @@ class Avifenc < Formula
   desc "avifenc / avifdec"
   homepage "https://github.com/AOMediaCodec/libavif"
   url "https://github.com/AOMediaCodec/libavif/archive/v0.9.1.tar.gz"
-  sha256 "9d8fd1f0c1d5beb4611c04780a7f1632cfc8c1cd657c55c8990145a0af9f2dff"
-  bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.9.1/"
-    sha256 cellar: :any_skip_relocation, big_sur: "7458b1387b4ea163a87ef586cb161acebc72c2270fd2cb872fae8b6b6926b7b2"
-  end
+  sha256 "8526f3fff34a05a51d7c703cdcf1d0d38c939b5b6dd4bb7d3a3405ddad88186c"
+  #bottle do
+  #  root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.9.1/"
+  #  sha256 cellar: :any_skip_relocation, big_sur: "7458b1387b4ea163a87ef586cb161acebc72c2270fd2cb872fae8b6b6926b7b2"
+  #end
 
   depends_on "cmake" => :build
   depends_on "nasm" => :build
