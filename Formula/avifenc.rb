@@ -4,7 +4,7 @@ class Avifenc < Formula
   url "https://github.com/AOMediaCodec/libavif/archive/v0.9.3.tar.gz"
   sha256 "bcd9a1f57f982a9615eb7e2faf87236dc88eb1d0c886f3471c7440ead605060d"
   bottle do
-    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.9.3/"
+    root_url "https://github.com/joedrago/homebrew-repo/releases/download/avifenc-v0.9.3"
     sha256 cellar: :any_skip_relocation, big_sur: "3bf876effdd16cf31cfca4aa74f8a2dec9b31da4611fea530214c65bde0c2125"
   end
 
